@@ -1,3 +1,8 @@
+
+import clases.Usuarios;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,13 +14,63 @@
  * @author snake
  */
 public class Contenedor extends javax.swing.JFrame {
+      Usuarios mod;
+private Clientes nuevaVentana1;
+private Proveedores nuevaVentana2;
+private Vendedores nuevaVentana3;
+private Bodega nuevaVentana4;
+private Productos nuevaVentana5;
+private Linea nuevaVentana6;
+private Marca nuevaVentana7;
 
-    /**
-     * Creates new form Contenedor
-     */
-    public Contenedor() {
+///--------------------------
+
+private ComprasE nuevaVentana8;
+private ComprasD nuevaVentana9;
+private VentasE nuevaVentana10;
+private VentasD nuevaVentana11;
+private Existencias nuevaVentana12;
+
+
+
+
+ public Contenedor() {
         initComponents();
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width/2 - getWidth()/2,size.height/2 - getHeight()/2);
+         
     }
+
+
+   
+
+  
+    Contenedor(Usuarios mod) {
+        initComponents();
+        setLocationRelativeTo(null);
+        this.mod = mod;
+       // JFrame.setDefaultLookAndFeelDecorated(true);
+      //  SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.MagmaSkin");
+                Contenedor ve= new Contenedor ();
+                ve.setVisible(false);
+
+        if (mod.getIdTipo() == 1) {
+               MenuCatalogo.setVisible(false);
+              MenuProcesos.setVisible(false);
+              MenuHerramientas.setVisible(false);
+             menuSalida.setVisible(false);
+        }
+        if (mod.getIdTipo() == 2) {
+               MenuCatalogo.setVisible(true);
+              MenuProcesos.setVisible(true);
+              MenuHerramientas.setVisible(true);
+              menuSalida.setVisible(true);
+        }
+               
+        
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,7 +83,7 @@ public class Contenedor extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        Contenedor = new javax.swing.JMenu();
+        MenuCatalogo = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -36,14 +91,14 @@ public class Contenedor extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        MenuProcesos = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
+        MenuHerramientas = new javax.swing.JMenu();
+        menuSalida = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,10 +114,20 @@ public class Contenedor extends javax.swing.JFrame {
             .addGap(0, 388, Short.MAX_VALUE)
         );
 
-        Contenedor.setText("Catalogo");
+        MenuCatalogo.setText("Catalogo");
+        MenuCatalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCatalogoActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setText("Cliente");
-        Contenedor.add(jMenuItem1);
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        MenuCatalogo.add(jMenuItem1);
 
         jMenuItem2.setText("Proveedores");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +135,15 @@ public class Contenedor extends javax.swing.JFrame {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        Contenedor.add(jMenuItem2);
+        MenuCatalogo.add(jMenuItem2);
 
         jMenuItem3.setText("Vendedores");
-        Contenedor.add(jMenuItem3);
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        MenuCatalogo.add(jMenuItem3);
 
         jMenuItem4.setText("Bodega");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -81,23 +151,43 @@ public class Contenedor extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        Contenedor.add(jMenuItem4);
+        MenuCatalogo.add(jMenuItem4);
 
         jMenuItem5.setText("Productos");
-        Contenedor.add(jMenuItem5);
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        MenuCatalogo.add(jMenuItem5);
 
         jMenuItem6.setText("Linea");
-        Contenedor.add(jMenuItem6);
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        MenuCatalogo.add(jMenuItem6);
 
         jMenuItem7.setText("Marca");
-        Contenedor.add(jMenuItem7);
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        MenuCatalogo.add(jMenuItem7);
 
-        jMenuBar1.add(Contenedor);
+        jMenuBar1.add(MenuCatalogo);
 
-        jMenu2.setText("Procesos");
+        MenuProcesos.setText("Procesos");
 
         jMenuItem8.setText("ComprasE");
-        jMenu2.add(jMenuItem8);
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        MenuProcesos.add(jMenuItem8);
 
         jMenuItem10.setText("ComprasD");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
@@ -105,28 +195,48 @@ public class Contenedor extends javax.swing.JFrame {
                 jMenuItem10ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem10);
+        MenuProcesos.add(jMenuItem10);
 
         jMenuItem11.setText("VentasE");
-        jMenu2.add(jMenuItem11);
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        MenuProcesos.add(jMenuItem11);
 
         jMenuItem12.setText("VentasD");
-        jMenu2.add(jMenuItem12);
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        MenuProcesos.add(jMenuItem12);
 
         jMenuItem13.setText("Existencias");
-        jMenu2.add(jMenuItem13);
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        MenuProcesos.add(jMenuItem13);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(MenuProcesos);
 
-        jMenu4.setText("herramientas");
-        jMenuBar1.add(jMenu4);
+        MenuHerramientas.setText("herramientas");
+        jMenuBar1.add(MenuHerramientas);
 
-        jMenu5.setText("Salir ");
+        menuSalida.setText("Salir ");
 
         jMenuItem9.setText("Out");
-        jMenu5.add(jMenuItem9);
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        menuSalida.add(jMenuItem9);
 
-        jMenuBar1.add(jMenu5);
+        jMenuBar1.add(menuSalida);
 
         setJMenuBar(jMenuBar1);
 
@@ -145,16 +255,145 @@ public class Contenedor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+  nuevaVentana2=new Proveedores();
+        jDesktopPane1.add(nuevaVentana2);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana2.getSize();
+        nuevaVentana2.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana2.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+     nuevaVentana4=new Bodega();
+        jDesktopPane1.add(nuevaVentana4);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana4.getSize();
+        nuevaVentana4.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana4.show();   // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
+     nuevaVentana9=new ComprasD();
+        jDesktopPane1.add(nuevaVentana9);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana9.getSize();
+        nuevaVentana9.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana9.show(); 
     }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+          nuevaVentana1=new Clientes();
+        jDesktopPane1.add(nuevaVentana1);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana1.getSize();
+        nuevaVentana1.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana1.show();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void MenuCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCatalogoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuCatalogoActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        nuevaVentana3=new Vendedores ();
+        jDesktopPane1.add(nuevaVentana3);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana3.getSize();
+        nuevaVentana3.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana3.show();        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        nuevaVentana5=new Productos();
+        jDesktopPane1.add(nuevaVentana5);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana5.getSize();
+        nuevaVentana5.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana5.show();        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        nuevaVentana6=new Linea();
+        jDesktopPane1.add(nuevaVentana1);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana6.getSize();
+        nuevaVentana6.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana6.show();        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    nuevaVentana7=new Marca();
+        jDesktopPane1.add(nuevaVentana7);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana7.getSize();
+        nuevaVentana7.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana7.show();    // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+      dispose();
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+      nuevaVentana8=new ComprasE();
+        jDesktopPane1.add(nuevaVentana8);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana8.getSize();
+        nuevaVentana8.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana8.show(); 
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+     nuevaVentana10=new VentasE();
+        jDesktopPane1.add(nuevaVentana10);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana10.getSize();
+        nuevaVentana10.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana10.show(); 
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        nuevaVentana11=new VentasD();
+        jDesktopPane1.add(nuevaVentana11);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana11.getSize();
+        nuevaVentana11.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana11.show(); 
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+       nuevaVentana12=new Existencias();
+        jDesktopPane1.add(nuevaVentana12);
+        
+        //centrar intenal
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = nuevaVentana12.getSize();
+        nuevaVentana12.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        nuevaVentana12.show(); 
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,11 +431,10 @@ public class Contenedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu Contenedor;
+    private javax.swing.JMenu MenuCatalogo;
+    private javax.swing.JMenu MenuHerramientas;
+    private javax.swing.JMenu MenuProcesos;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -211,5 +449,6 @@ public class Contenedor extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenu menuSalida;
     // End of variables declaration//GEN-END:variables
 }
