@@ -8,6 +8,13 @@
  *
  * @author snake
  */
+import clases.Hash;
+import javax.swing.JOptionPane;
+import clases.SqlUsuarios;
+import clases.Usuarios;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 public class RegistroLogin extends javax.swing.JFrame {
 
     /**
@@ -226,7 +233,13 @@ public class RegistroLogin extends javax.swing.JFrame {
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
-
+private void limpiar() {
+        txtUsuario.setText("");
+        txtPassword.setText("");
+        txtConfirmaPassword.setText("");
+        txtNombre.setText("");
+        txtEmail.setText("");
+    }
     /**
      * @param args the command line arguments
      */

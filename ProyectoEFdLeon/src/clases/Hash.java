@@ -1,10 +1,8 @@
-
-
 /**
  *
  * @author Nayre de Leon
  */
-package Clases;
+package clases;
 
 public class Hash {
     

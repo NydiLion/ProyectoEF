@@ -5,7 +5,7 @@
  * @author Nayre de Leon
  */
 //Conexiones a la base de datos para obtener los datos de registro y login
-package Clases;
+package clases;
 
 
 import java.sql.Connection;
@@ -51,7 +51,6 @@ public class SqlUsuarios extends Conexion {
         Connection con = getConexion();
   //busca la contraseña y retorna y si es falsa o verdadera para dar acceso al menu
         String sql = "SELECT id, usuario, password, nombre, idTipo FROM usuarios WHERE usuario = ? LIMIT 1";
-
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, usr.getUsuario());

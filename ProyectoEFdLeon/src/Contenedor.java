@@ -28,7 +28,7 @@ public class Contenedor extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        Contenedor = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -59,10 +59,10 @@ public class Contenedor extends javax.swing.JFrame {
             .addGap(0, 388, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Catalogo");
+        Contenedor.setText("Catalogo");
 
         jMenuItem1.setText("Cliente");
-        jMenu1.add(jMenuItem1);
+        Contenedor.add(jMenuItem1);
 
         jMenuItem2.setText("Proveedores");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +70,10 @@ public class Contenedor extends javax.swing.JFrame {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        Contenedor.add(jMenuItem2);
 
         jMenuItem3.setText("Vendedores");
-        jMenu1.add(jMenuItem3);
+        Contenedor.add(jMenuItem3);
 
         jMenuItem4.setText("Bodega");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -81,18 +81,18 @@ public class Contenedor extends javax.swing.JFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
+        Contenedor.add(jMenuItem4);
 
         jMenuItem5.setText("Productos");
-        jMenu1.add(jMenuItem5);
+        Contenedor.add(jMenuItem5);
 
         jMenuItem6.setText("Linea");
-        jMenu1.add(jMenuItem6);
+        Contenedor.add(jMenuItem6);
 
         jMenuItem7.setText("Marca");
-        jMenu1.add(jMenuItem7);
+        Contenedor.add(jMenuItem7);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(Contenedor);
 
         jMenu2.setText("Procesos");
 
@@ -192,8 +192,8 @@ public class Contenedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Contenedor;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;

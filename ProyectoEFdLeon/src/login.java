@@ -6,14 +6,30 @@
 
 /**
  *
- * @author snake
+ * @author Nayre de Leon
+ *
  */
+import clases.Hash;
+import javax.swing.JOptionPane;
+import clases.SqlUsuarios;
+import clases.Usuarios;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.UIManager;
+
+
 public class login extends javax.swing.JFrame {
 
-    /** Creates new form login */
+    /**
+     * Creates new form login
+     */
     public login() {
         initComponents();
+         Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width/2 - getWidth()/2,size.height/2 - getHeight()/2);
     }
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -134,9 +150,8 @@ public class login extends javax.swing.JFrame {
                 Inicio.frmLog = null;
                 this.dispose();
 
-                Contenedor frmMenu = new Contenedor(mod);
+                Contenedor frmMenu = new Contenedor (mod);
                 frmMenu.setVisible(true);
-
             } else {
                 JOptionPane.showMessageDialog(null, "Datos incorrectos");
                 limpiar();
@@ -145,7 +160,15 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Debe ingresar sus datos");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
-
+ 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {                                   
+        Inicio.frmLog = null;
+    }                                  
+    
+    private void limpiar() {
+        txtUsuario.setText("");
+        txtPassword.setText("");
+    }
     /**
      * @param args the command line arguments
      */

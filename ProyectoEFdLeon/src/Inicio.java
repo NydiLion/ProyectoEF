@@ -8,15 +8,22 @@
  *
  * @author snake
  */
-public class Inicio extends javax.swing.JFrame {
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.UIManager;
 
+public class Inicio extends javax.swing.JFrame {
+ public static RegistroLogin frmReg;
+    public static login frmLog;
     /**
      * Creates new form Inicio
      */
     public Inicio() {
         initComponents();
+         Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width/2 - getWidth()/2,size.height/2 - getHeight()/2);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -122,7 +129,7 @@ public class Inicio extends javax.swing.JFrame {
 
         if (frmReg == null) {
 
-            frmReg = new registro();
+            frmReg = new RegistroLogin();
             frmReg.setVisible(true);
         }
     }//GEN-LAST:event_btnRegistroActionPerformed

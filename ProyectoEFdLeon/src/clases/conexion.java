@@ -3,7 +3,7 @@
  *
  * @author Nayre de Leon
  */
-package Clases;
+package clases;
 
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class Conexion {
     
-    private final String base = "Admin0";
+    private final String base = "Admin2";
     private final String user = "root";
     private final String password = "";
     private final String url = "jdbc:mysql://localhost/" + base;
@@ -35,5 +35,5 @@ public class Conexion {
       return con;  
     }
 
-    
+
 }
