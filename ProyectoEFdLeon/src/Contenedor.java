@@ -15,10 +15,10 @@ import java.awt.Toolkit;
  */
 public class Contenedor extends javax.swing.JFrame {
       Usuarios mod;
-private Clientes nuevaVentana1;
-private Proveedores nuevaVentana2;
-private Vendedores nuevaVentana3;
-private Bodega nuevaVentana4;
+private Cliente nuevaVentana1;
+private Proveedor nuevaVentana2;
+private Vendedor nuevaVentana3;
+private Bodegas nuevaVentana4;
 private Productos nuevaVentana5;
 private Linea nuevaVentana6;
 private Marca nuevaVentana7;
@@ -255,7 +255,7 @@ private Existencias nuevaVentana12;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-  nuevaVentana2=new Proveedores();
+  nuevaVentana2=new Proveedor();
         jDesktopPane1.add(nuevaVentana2);
         
         //centrar intenal
@@ -266,7 +266,7 @@ private Existencias nuevaVentana12;
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-     nuevaVentana4=new Bodega();
+     nuevaVentana4=new Bodegas();
         jDesktopPane1.add(nuevaVentana4);
         
         //centrar intenal
@@ -289,7 +289,7 @@ private Existencias nuevaVentana12;
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-          nuevaVentana1=new Clientes();
+          nuevaVentana1=new Cliente();
         jDesktopPane1.add(nuevaVentana1);
         
         //centrar intenal
@@ -304,7 +304,7 @@ private Existencias nuevaVentana12;
     }//GEN-LAST:event_MenuCatalogoActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        nuevaVentana3=new Vendedores ();
+        nuevaVentana3=new Vendedor ();
         jDesktopPane1.add(nuevaVentana3);
         
         //centrar intenal
