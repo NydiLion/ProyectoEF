@@ -27,11 +27,8 @@ public class Proveedor extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -40,6 +37,11 @@ public class Proveedor extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        añadir = new javax.swing.JButton();
+        modificar = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        buscar4 = new javax.swing.JButton();
+        Txt_Buscar = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
@@ -56,20 +58,11 @@ public class Proveedor extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("jButton1");
-
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("jLabel4");
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("jButton2");
-
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("jLabel5");
-
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton3.setText("jButton3");
 
         jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
@@ -90,6 +83,42 @@ public class Proveedor extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("jLabel3");
 
+        añadir.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        añadir.setForeground(new java.awt.Color(0, 0, 153));
+        añadir.setText("AÑADIR");
+        añadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                añadirActionPerformed(evt);
+            }
+        });
+
+        modificar.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        modificar.setForeground(new java.awt.Color(0, 0, 153));
+        modificar.setText("MODIFICAR");
+        modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarActionPerformed(evt);
+            }
+        });
+
+        jButton10.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(0, 0, 153));
+        jButton10.setText("Eliminar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        buscar4.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 14)); // NOI18N
+        buscar4.setForeground(new java.awt.Color(0, 0, 153));
+        buscar4.setText("BUSCAR");
+        buscar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscar4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -109,50 +138,54 @@ public class Proveedor extends javax.swing.JInternalFrame {
                     .addComponent(jTextField3)
                     .addComponent(jTextField4)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(143, 143, 143)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(339, 339, 339))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(buscar4)
+                        .addGap(9, 9, 9))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Txt_Buscar, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(añadir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(modificar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(149, 149, 149))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(jButton1)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jButton2)))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(41, 41, 41)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel4)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton3)))
+                        .addContainerGap()
+                        .addComponent(añadir)
+                        .addGap(33, 33, 33)
+                        .addComponent(modificar)
+                        .addGap(46, 46, 46)
+                        .addComponent(jButton10)
+                        .addGap(18, 18, 18)
+                        .addComponent(Txt_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buscar4)))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -172,11 +205,102 @@ public class Proveedor extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void añadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirActionPerformed
+        //Codigo que permite Ingresar registros en la base de datos
+        //** CREADO EL CODIGO POR Nayre de Leon 9959-19-13837
+        //** FINALIZO EL 23 DE MAYO
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/conceptos1", "root", "");
+            PreparedStatement pst = cn.prepareStatement("insert into concepto values(?,?,?,?)");
+
+            pst.setString(1, "0");
+            pst.setString(2, txtCodigoConcep.getText().trim());  //* se Registran en la base de datos los registros que se ingresaron en los textField
+            pst.setString(3, txtNombreConcep.getText().trim());
+            pst.setString(4, txtEfectoConcep.getText().trim());
+            pst.executeUpdate();
+
+            txtCodigoConcep.setText("");
+            txtNombreConcep.setText("");
+            txtEfectoConcep.setText("");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "Registro Concepto Exitoso.");
+        }
+    }//GEN-LAST:event_añadirActionPerformed
+
+    private void modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarActionPerformed
+        //Codigo que permite modificar registros en la base de datos
+        //** CREADO EL CODIGO POR Nayre de Leon 9959-19-13837
+        try {
+            String ID = Txt_Buscar.getText().trim();
+
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Conceptos1", "root", "");
+            PreparedStatement pst = cn.prepareStatement("update concepto set codigo_concepto = ?, nombre_concepto = ?, efecto_concepto = ? where ID = " + ID);
+
+            pst.setString(1, txtCodigoConcep.getText().trim());   //* se buscan de la base de datos los registros que se ingresaron en los textField  para Modificarlos y guardar los cambios
+            pst.setString(2, txtNombreConcep.getText().trim());
+            pst.setString(3, txtEfectoConcep.getText().trim());
+            pst.executeUpdate();
+
+        } catch (Exception e)
+        {
+            {
+                JOptionPane.showMessageDialog(null, "Modificacion al Registro Concepto Exitosamente.");
+            }
+        }
+    }//GEN-LAST:event_modificarActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        //Codigo que permite borrar registros en la base de datos
+        //** CREADO EL CODIGO POR Nayre de Leon 9959-19-13837
+        try {
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Conceptos1", "root", "");
+            PreparedStatement pst = cn.prepareStatement("delete from concepto where ID = ?");
+
+            pst.setString(1, Txt_Buscar.getText().trim());
+            pst.executeUpdate();
+
+            txtCodigoConcep.setText("");   //* se buscan  y eliminan de la base de datos los registros que se ingresaron en los textField
+            txtNombreConcep.setText("");
+            txtEfectoConcep.setText("");
+
+            JOptionPane.showMessageDialog(null, "Registro Eliminado.");
+
+        } catch (Exception e) {
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void buscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar4ActionPerformed
+        //Codigo que permite consultar registros en la base de datos
+        //** CREADO EL CODIGO POR Nayre de Leon 9959-19-13837
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Conceptos1", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from concepto where ID = ?");
+            pst.setString(1, Txt_Buscar.getText().trim());
+
+            ResultSet rs = pst.executeQuery();
+
+            if(rs.next()){
+
+                txtCodigoConcep.setText(rs.getString("codigo_concepto"));   //* se buscan de la base de datos los registros que se ingresaron en los textField
+                txtNombreConcep.setText(rs.getString("nombre_concepto"));
+                txtEfectoConcep.setText(rs.getString("efecto_concepto"));
+            } else {
+                JOptionPane.showMessageDialog(null, "Concepto No Registrado.");
+            }
+
+        }catch (Exception e){
+
+        }
+    }//GEN-LAST:event_buscar4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JTextField Txt_Buscar;
+    private javax.swing.JButton añadir;
+    private javax.swing.JButton buscar4;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -202,5 +326,6 @@ public class Proveedor extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton modificar;
     // End of variables declaration//GEN-END:variables
 }
