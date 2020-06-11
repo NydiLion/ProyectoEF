@@ -19,9 +19,9 @@ private Cliente nuevaVentana1;
 private Proveedor nuevaVentana2;
 private Vendedor nuevaVentana3;
 private Bodegas nuevaVentana4;
-private Productos nuevaVentana5;
-private Linea nuevaVentana6;
-private Marca nuevaVentana7;
+private Producto nuevaVentana5;
+private Lineas nuevaVentana6;
+private Marcas nuevaVentana7;
 
 ///--------------------------
 
@@ -315,7 +315,7 @@ private Existencias nuevaVentana12;
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        nuevaVentana5=new Productos();
+        nuevaVentana5=new Producto();
         jDesktopPane1.add(nuevaVentana5);
         
         //centrar intenal
@@ -326,7 +326,7 @@ private Existencias nuevaVentana12;
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        nuevaVentana6=new Linea();
+        nuevaVentana6=new Lineas();
         jDesktopPane1.add(nuevaVentana1);
         
         //centrar intenal
@@ -337,7 +337,7 @@ private Existencias nuevaVentana12;
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-    nuevaVentana7=new Marca();
+    nuevaVentana7=new Marcas();
         jDesktopPane1.add(nuevaVentana7);
         
         //centrar intenal
